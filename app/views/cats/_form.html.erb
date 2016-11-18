@@ -1,0 +1,23 @@
+<%= form_for @cat do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <div>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+  <div>
+    <%= f.label :gender %>
+    <%= f.select :gender, ['male', 'female'] %>
+  </div>
+  <div>
+    <%= f.label :fur_color %>
+    <%= f.text_field :fur_color %>
+  </div>
+  <div>
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
+  </div>
+  <%= f.submit nil, class: 'btn btn-success' %>
+<% end %>
